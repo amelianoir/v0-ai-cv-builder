@@ -9,30 +9,30 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'ResumeAI - AI-Powered CV Builder | Create Professional Resumes Fast',
-  description: 'Create professional resumes in minutes with AI-powered writing, beautiful templates, and instant PDF export. One-time ($1.99) or monthly ($13.99) plans. GDPR compliant.',
-  keywords: ['resume builder', 'CV builder', 'AI resume', 'professional resume', 'job application', 'resume template'],
+  title: 'CVDesign.Online - AI-Powered CV Builder | Professional Resumes in Minutes',
+  description: 'Create stunning professional CVs with AI-powered suggestions, 6 premium templates, and instant PDF export. Starting at €1.99. GDPR compliant, secure, and fully private.',
+  keywords: ['CV builder', 'resume builder', 'AI CV generator', 'professional resume templates', 'job application', 'career tools', 'resume writing', 'cv templates'],
   generator: 'v0.app',
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://resumeai.app'),
-  authors: [{ name: 'ResumeAI' }],
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://cvdesign.online'),
+  authors: [{ name: 'CVDesign.Online' }],
   openGraph: {
-    title: 'ResumeAI - AI-Powered CV Builder',
-    description: 'Create a stunning professional resume with AI assistance in just minutes.',
+    title: 'CVDesign.Online - AI-Powered CV Builder',
+    description: 'Create a stunning professional CV with AI assistance and premium templates.',
     type: 'website',
-    url: 'https://resumeai.app',
+    url: 'https://cvdesign.online',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'ResumeAI - AI Resume Builder',
+        alt: 'CVDesign.Online - Professional CV Builder',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ResumeAI - AI-Powered CV Builder',
-    description: 'Create professional resumes with AI in minutes',
+    title: 'CVDesign.Online - AI-Powered CV Builder',
+    description: 'Build professional CVs with AI. Premium templates. Instant PDF export.',
     images: ['/og-image.png'],
   },
   viewport: {

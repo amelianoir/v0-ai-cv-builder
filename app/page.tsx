@@ -92,7 +92,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Sparkles className="w-6 h-6 text-primary" />
-            <span className="text-xl font-bold">ResumeAI</span>
+            <span className="text-xl font-bold">CVDesign</span>
           </div>
           <nav className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-sm hover:text-primary transition">
@@ -107,6 +107,9 @@ export default function HomePage() {
             <a href="#faq" className="text-sm hover:text-primary transition">
               FAQ
             </a>
+            <Link href="/blog" className="text-sm hover:text-primary transition">
+              Blog
+            </Link>
           </nav>
           <div className="flex items-center gap-4">
             <Button variant="ghost" asChild>
@@ -338,9 +341,9 @@ export default function HomePage() {
             <div>
               <h3 className="font-bold mb-4 flex items-center gap-2">
                 <Sparkles className="w-5 h-5 text-primary" />
-                ResumeAI
+                CVDesign
               </h3>
-              <p className="text-sm text-muted-foreground">Create professional resumes with AI assistance in minutes.</p>
+              <p className="text-sm text-muted-foreground">Create professional CVs with AI assistance in minutes.</p>
             </div>
             <div>
               <h4 className="font-semibold mb-4 text-sm">Product</h4>
@@ -358,6 +361,11 @@ export default function HomePage() {
                 <li>
                   <Link href="#pricing" className="hover:text-primary transition">
                     Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blog" className="hover:text-primary transition">
+                    Blog
                   </Link>
                 </li>
               </ul>
@@ -391,7 +399,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-            <p>&copy; 2025 ResumeAI. All rights reserved.</p>
+            <p>&copy; 2025 CVDesign.Online. All rights reserved.</p>
             <p>Made with passion for professionals worldwide</p>
           </div>
         </div>
