@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Plus, FileText, Settings, LogOut, Sparkles, Upload, Download } from 'lucide-react'
-import Link from 'next/link'
+import { AICVGenerator } from '@/components/ai-cv-generator'
 
 interface Resume {
   id: string
@@ -73,7 +73,7 @@ export default function DashboardPage() {
           <div>
             <h1 className="text-2xl font-bold flex items-center gap-2">
               <Sparkles className="w-6 h-6 text-primary" />
-              ResumeAI
+              CVDesign
             </h1>
             <p className="text-sm text-muted-foreground">{user?.email}</p>
           </div>
@@ -93,13 +93,27 @@ export default function DashboardPage() {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 py-12">
-        <Tabs defaultValue="my-resumes" className="w-full">
-          <TabsList className="grid w-full md:w-auto grid-cols-2 md:grid-cols-4">
+        <Tabs defaultValue="ai-assistant" className="w-full">
+          <TabsList className="grid w-full md:w-auto grid-cols-2 md:grid-cols-5">
+            <TabsTrigger value="ai-assistant" className="flex items-center gap-2">
+              <Sparkles className="w-4 h-4" />
+              AI Assistant
+            </TabsTrigger>
             <TabsTrigger value="my-resumes">My Resumes</TabsTrigger>
             <TabsTrigger value="create">Create New</TabsTrigger>
             <TabsTrigger value="templates">Templates</TabsTrigger>
             <TabsTrigger value="upgrade">Upgrade</TabsTrigger>
           </TabsList>
+
+          {/* AI Assistant Tab */}
+          <TabsContent value="ai-assistant" className="space-y-6">
+            <AICVGenerator
+              onCVComplete={(cv) => {
+                console.log('[v0] CV completed:', cv)
+                // Here you can save to dashboard or navigate to editor
+              }}
+            />
+          </TabsContent>
 
           {/* My Resumes Tab */}
           <TabsContent value="my-resumes" className="space-y-6">
