@@ -2,7 +2,7 @@
 
 import { useSearchParams, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import { Checkout } from '@/components/checkout'
+import Checkout from '@/components/checkout'
 import { PRODUCTS_USD, PRODUCTS_EUR } from '@/lib/products'
 import { Button } from '@/components/ui/button'
 import { ArrowLeft, Loader2 } from 'lucide-react'
