@@ -1,14 +1,14 @@
 'use client'
 
 import { useSearchParams, useRouter } from 'next/navigation'
-import { useEffect, useState } from 'react'
-import { Checkout } from '@/components/checkout'
+import { useEffect, useState, Suspense } from 'react'
+import Checkout from '@/components/checkout'
 import { PRODUCTS_USD, PRODUCTS_EUR } from '@/lib/products'
 import { Button } from '@/components/ui/button'
 import { ArrowLeft, Loader2 } from 'lucide-react'
 import Link from 'next/link'
 
-export default function CheckoutPage() {
+function CheckoutPageContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const [currency, setCurrency] = useState<'USD' | 'EUR'>('USD')
@@ -176,5 +176,19 @@ export default function CheckoutPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function CheckoutPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-background flex items-center justify-center">
+          <Loader2 className="w-8 h-8 animate-spin text-primary" />
+        </div>
+      }
+    >
+      <CheckoutPageContent />
+    </Suspense>
   )
 }

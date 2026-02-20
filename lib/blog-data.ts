@@ -280,9 +280,9 @@ By following this checklist, you'll walk into your interview confident, prepared
   },
   {
     id: '5',
-    title: 'Salary Negotiation: How to Ask for What You're Worth',
+    title: 'Salary Negotiation: How to Ask for What You\'re Worth',
     slug: 'salary-negotiation-guide',
-    excerpt: 'Master the art of salary negotiation and ensure you're compensated fairly for your skills and experience.',
+    excerpt: 'Master the art of salary negotiation and ensure you\'re compensated fairly for your skills and experience.',
     author: 'Lisa Martinez',
     category: 'Career Tips',
     tags: ['salary', 'negotiation', 'compensation', 'career'],
