@@ -11,32 +11,32 @@ const templates = [
   {
     id: 'classic',
     title: 'Classic',
-    description: 'Timeless and professional. Perfect for traditional industries.',
+    description: 'Timeless and professional. Perfect for traditional industries and corporate roles.',
   },
   {
     id: 'modern',
     title: 'Modern',
-    description: 'Contemporary design with clean lines and modern aesthetics.',
+    description: 'Contemporary design with clean lines and modern aesthetics for tech and startups.',
   },
   {
     id: 'minimal',
     title: 'Minimal',
-    description: 'Stripped down to essentials. Let your content shine.',
+    description: 'Stripped down to essentials. Let your content shine with maximum clarity.',
   },
   {
     id: 'executive',
     title: 'Executive',
-    description: 'Premium design for senior and C-level positions.',
+    description: 'Premium design for senior and C-level positions with sophisticated styling.',
   },
   {
     id: 'tech',
     title: 'Tech-Focused',
-    description: 'Modern design ideal for tech and creative roles.',
+    description: 'Modern code-inspired design ideal for developers and tech professionals.',
   },
   {
     id: 'creative',
     title: 'Creative',
-    description: 'Bold and vibrant for creative professionals.',
+    description: 'Bold and vibrant for creative professionals and designers.',
   },
 ]
 
