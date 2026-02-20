@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Allow: /auth/sign-up
+Allow: /auth/login
+Allow: /privacy
+Allow: /terms
+Allow: /refund
+
+Disallow: /api/
+Disallow: /dashboard/
+Disallow: /protected/
+Disallow: /checkout/
+Disallow: /.next/
+
+Sitemap: https://resumeai.app/sitemap.xml
