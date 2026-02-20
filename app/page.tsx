@@ -110,6 +110,9 @@ export default function HomePage() {
             <Link href="/blog" className="text-sm hover:text-primary transition">
               Blog
             </Link>
+            <Link href="/contact" className="text-sm hover:text-primary transition">
+              Contact
+            </Link>
           </nav>
           <div className="flex items-center gap-4">
             <Button variant="ghost" asChild>
@@ -368,6 +371,11 @@ export default function HomePage() {
                     Blog
                   </Link>
                 </li>
+                <li>
+                  <Link href="/contact" className="hover:text-primary transition">
+                    Contact
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>
@@ -393,7 +401,11 @@ export default function HomePage() {
             <div>
               <h4 className="font-semibold mb-4 text-sm">Connect</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>Email: support@resumeai.com</li>
+                <li>
+                  <a href="mailto:info@cvdesign.online" className="hover:text-primary transition">
+                    info@cvdesign.online
+                  </a>
+                </li>
                 <li>Status: Fully Operational</li>
               </ul>
             </div>
