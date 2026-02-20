@@ -2,7 +2,7 @@
 
 import { createClient } from '@/lib/supabase/client'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -43,7 +43,7 @@ interface ResumeData {
   skills: string[]
 }
 
-export default function ResumePage() {
+function ResumePageContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const templateParam = searchParams.get('template')
@@ -371,5 +371,19 @@ export default function ResumePage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function ResumePage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-background flex items-center justify-center">
+          <Loader2 className="w-8 h-8 animate-spin text-primary" />
+        </div>
+      }
+    >
+      <ResumePageContent />
+    </Suspense>
   )
 }
